@@ -1,0 +1,21 @@
+{
+    "name": "jhuet/rest-doc-converter",
+    "description": "Transforms a REST documentation (RAML...) to a set of matching requests and responses.",
+    "keywords": [],
+    "license": "",
+    "type": "library",
+    "require": {
+        "php": ">=5.4.8",
+        "alecsammon/php-raml-parser": "~1.0"
+    },
+    "suggest": {
+        "phly/http": "To create Requests and Responses matching this library with PsrPhlyProvider.",
+        "symfony/http-foundation": "To create Requests and Responses matching this library with Symfony2Provider.",
+        "zendframework/zend-http": "To create Requests and Responses matching this library with Zend2Provider."
+    },
+    "minimum-stability": "beta",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": { "Jhu\\RestDocConverter\\": "src/" }
+    }
+}
