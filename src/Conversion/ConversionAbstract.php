@@ -57,9 +57,7 @@ abstract class ConversionAbstract implements ConversionInterface
     }
 
     /**
-     * Set Request
-     *
-     * @param mixed $request
+     * {@inheritDoc}
      */
     abstract public function setRequest($request);
 
@@ -74,16 +72,12 @@ abstract class ConversionAbstract implements ConversionInterface
     }
 
     /**
-     * Add a Response
-     *
-     * @param mixed $response
+     * {@inheritDoc}
      */
     abstract public function addResponse($response);
 
     /**
-     * Set Responses
-     *
-     * @param array $responses
+     * {@inheritDoc}
      */
     abstract public function setResponses($responses);
 
@@ -98,9 +92,7 @@ abstract class ConversionAbstract implements ConversionInterface
     }
 
     /**
-     * Set Method
-     *
-     * @param mixed $method
+     * {@inheritDoc}
      */
     public function setMethod($method)
     {
