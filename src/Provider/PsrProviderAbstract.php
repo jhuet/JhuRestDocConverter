@@ -32,14 +32,27 @@ abstract class PsrProviderAbstract implements ProviderInterface
     abstract public function createResponse($body = null, $statusCode = null, $headers = null);
 
     /**
-     * @param mixed     $request
-     * @param array     $responses
-     * @param string    $method
+     * @param RequestInterface      $request
+     * @param array                 $responses      A list of \Psr\Http\Message\ResponseInterface
+     * @param string                $method
      *
      * @return PsrConversion
      */
     public function createConversion($request = null, array $responses = null, $method = null)
     {
         return new PsrConversion($request, $responses, $method);
+    }
+
+    /**
+     * @param string    $body
+     *
+     * @return resource
+     */
+    protected function prepareBody($body)
+    {
+        $psrBody = fopen('php://memory', 'r+');
+        fwrite($psrBody, $body);
+
+        return $psrBody;
     }
 }

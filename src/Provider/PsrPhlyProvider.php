@@ -15,10 +15,7 @@ class PsrPhlyProvider extends PsrProviderAbstract
      */
     public function createRequest($uri = null, $methodType = null, $body = null, $headers = null)
     {
-        $psrBody = fopen('php://memory', 'r+');
-        fwrite($psrBody, $body);
-
-        return new Request($uri, $methodType, $psrBody, $headers);
+        return new Request($uri, $methodType, $this->prepareBody($body), $headers);
     }
 
     /**
@@ -26,9 +23,6 @@ class PsrPhlyProvider extends PsrProviderAbstract
      */
     public function createResponse($body = null, $statusCode = null, $headers = null)
     {
-        $psrBody = fopen('php://memory', 'r+');
-        fwrite($psrBody, $body);
-
-        return new Response($psrBody, $statusCode, $headers);
+        return new Response($this->prepareBody($body), $statusCode, $headers);
     }
 }

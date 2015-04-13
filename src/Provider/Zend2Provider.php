@@ -59,9 +59,9 @@ class Zend2Provider implements ProviderInterface
     }
 
     /**
-     * @param mixed     $request
-     * @param array     $responses
-     * @param string    $method
+     * @param Request       $request
+     * @param array         $responses      A list of \Zend\Http\Response
+     * @param string        $method
      *
      * @return Zend2Conversion
      */

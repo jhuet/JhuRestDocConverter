@@ -32,7 +32,7 @@ interface ProviderInterface
      * @param array     $responses
      * @param string    $method
      *
-     * @return ConversionInterface
+     * @return mixed
      */
     public function createConversion($request = null, array $responses = null, $method = null);
 }

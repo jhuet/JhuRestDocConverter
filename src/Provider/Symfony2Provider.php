@@ -43,9 +43,9 @@ class Symfony2Provider implements ProviderInterface
     }
 
     /**
-     * @param mixed     $request
-     * @param array     $responses
-     * @param string    $method
+     * @param Request       $request
+     * @param array         $responses      A list of \Symfony\Component\HttpFoundation\Response
+     * @param string        $method
      *
      * @return Symfony2Conversion
      */
